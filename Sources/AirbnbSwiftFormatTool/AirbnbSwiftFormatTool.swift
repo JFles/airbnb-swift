@@ -98,7 +98,7 @@ struct AirbnbSwiftFormatTool: ParsableCommand {
   /// Builds a command that runs the SwiftFormat tool
   private func makeSwiftFormatCommand() -> Command {
     var arguments = directories + [
-      "--config", swiftFormatConfig,
+      "--config", swiftFormatConfig, "--recursive"
     ]
 
     if let swiftFormatCachePath = swiftFormatCachePath {
